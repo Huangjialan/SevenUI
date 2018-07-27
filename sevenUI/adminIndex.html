@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/seven-style.css" />
+		<link rel="stylesheet" href="css/admin-style.css" />
+		<link rel="stylesheet" href="css/font_v1/iconfont.css" />
+		<link rel="stylesheet" href="css/font_v2/font-awesome.min.css" />
+		<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/sevenUI.js"></script>
+
+		<!--左边栏滚动-->
+		<script type="text/javascript" src="lib/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="js/plugins/init.js"></script>
+		<!--组合框-->
+		<script type="text/javascript" src="js/plugins/seven.combox.js"></script>
+		<!--滑动条-->
+		<script type="text/javascript" src="js/plugins/Drag.js"></script>
+		<script type="text/javascript" src="js/plugins/seven.slideBar.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="sv_navbar_top">
+			<div class="navbar_brand">
+				<img class="sv_logo" src="img/icon_logo.png" /> SevenUI
+			</div>
+		</div>
+		<div class="sv_sidebar sidebar_color">
+			<div data-scrollbar=true data-height="100%">
+				<div class="sidebar_header">
+					<div class="info">
+						<img src="img/iconfont-shuaxin.png" />
+						<div class="name">Seven Liu</div>
+						<div class="text">Front end developer</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-align-left"></i>commen<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a href="cataloguePage.html">目录</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li active">
+						<a><i class="fa fa-2x fa-tags"></i>UI Elements<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li class="active">
+								<a>commen UI</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-th"></i>Form<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainContent">
+			<div class="row">
+				<div class="col-6">
+					<div class="sv_panel">
+						<div class="panel_head">组合输入框
+							<div class="btn_box">
+								<div data-click="panel-min" class="btn_circle"><i class="fa fa-minus-circle"></i></div>
+								<div data-click="panel-close" class="btn_circle"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</div>
+						<div class="panel_body">
+							<div class="combobox clearfix">
+								<div class="combobox_input col-11"><input type="text" name="combo" class="sv_combo" id="sv_combo" placeholder="可直接输入您的内容" /></div>
+								<input class="col-2" onclick="get_value()" type="button" value="get value" />
+								<label class="col-8" id="showCombo" class="col-4"></label>
+							</div>
+						</div>
+					</div>
+					<div class="sv_panel">
+						<div class="panel_head">滑动条
+							<div class="btn_box">
+								<div data-click="panel-min" class="btn_circle"><i class="fa fa-minus-circle"></i></div>
+								<div data-click="panel-close" class="btn_circle"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</div>
+						<div class="panel_body">
+							<div id="idSlider1" data-position="30" class="sv_sliderBar_thin mar_t_30 yellow">
+								<div id="slide_color1" class="slide_color green_bg_light"></div>
+								<div id="idBar1" class="bar"></div>
+							</div>
+							<div id="idSlider2" data-position="70" class="sv_sliderBar_thin mar_t_30">
+								<div id="slide_color2" class="slide_color red_bg_light"></div>
+								<div id="idBar2" class="bar"></div>
+							</div>
+							<div id="idSlider3" data-position="20" class="sv_sliderBar mar_t_20">
+								<div id="slide_color3" class="slide_color blue_bg_light"></div>
+								<div id="idBar3" class="bar blue_bg"></div>
+							</div>
+							<div class="slideBarShow">
+								<p>当前值：<span id="idCurrentValue"></span></p>
+								<p>当前百分比：<span id="idCurrentPercent"></span>%</p>
+								<p>状态：<span id="idCurrentState">未开始</span></p>
+								<p>设置最小值：
+									<input id="txtMin" type="text" value="0" size="5" /> 设置最大值：
+									<input id="txtMax" type="text" value="100" size="5" /></p>
+								<p>
+									移动到：
+									<input id="txtMove" type="text" value="50" size="5" />
+									<input id="btnMoveV" type="button" value="按实际值" />
+									<input id="btnMoveP" type="button" value="按百分比" />
+								</p>
+								<input id="btnEase" type="button" value="设置缓动" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="sv_panel">
+						<div class="panel_head">开关按钮
+							<div class="btn_box">
+								<div data-click="panel-min" class="btn_circle"><i class="fa fa-minus-circle"></i></div>
+								<div data-click="panel-close" class="btn_circle"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</div>
+						<div class="panel_body">
+							<div class="switch_btn_box">
+								<div data-click="switch-btn" data-state="off" class="switch_box margin_t_20">
+									<span>关闭</span>
+									<div class="switch_btn">
+										<span class="switcher"></span>
+									</div>
+									<span>开启</span>
+								</div>
+								<div data-click="switch-btn" data-state="on" class="switch_box margin_t_20 on">
+									<div class="switch_btn green">
+										<span class="switcher"></span>
+									</div>
+								</div>
+								<div data-click="switch-btn" class="switch_box margin_t_20 on">
+									<div class="switch_btn red">
+										<span class="switcher"></span>
+									</div>
+								</div>
+								<div data-click="switch-btn" class="switch_box margin_t_20 on">
+									<div class="switch_btn yellow">
+										<span class="switcher"></span>
+									</div>
+								</div>
+								<div data-click="switch-btn" class="switch_box margin_t_20 on">
+									<div class="switch_btn black">
+										<span class="switcher"></span>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="switch_btn_box">
+								<div id="switch_btn" data-click="switch-btn" data-state="on" class="switch_box margin_t_20 on">
+									<span class="switch_btn black">
+									<span class="switcher"></span>
+									</span>
+								</div>
+								状态：<span id="switch_state">开启</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			handleSidebarMenu();
+			handleSlimScroll();
+			handlePanel();
+			$(function() {
+				//切换按钮
+				$('#switch_btn').click(function() {
+					if(this.dataset.state == "on") {
+						$('#switch_state').text("关闭");
+					} else {
+						$('#switch_state').text("开启");
+					}
+				});
+			})
+			$('.sv_combo').combobox(['china', 'japan', 'usa', 'russiarussiarussrussiarussiarussrussiarussiaruss']);
+
+			function get_value() {
+				$('#showCombo').text($('#sv_combo').val());
+			}
+			//滑动条,data-position可以设置初始位置，不得大于100
+			var sld1 = new Slider("idSlider1", "idBar1", "slide_color1");
+			var sld2 = new Slider("idSlider2", "idBar2", "slide_color2");
+			var sld3 = new Slider("idSlider3", "idBar3", "slide_color3", {
+				onMin: function() {
+					$("#idCurrentState").text("到达开始值");
+				},
+				onMax: function() {
+					$("#idCurrentState").text("到达结束值");
+				},
+				onMid: function() {
+					$("#idCurrentState").text("滑动中");
+				},
+				onMove: function() {
+					$("#idCurrentValue").text(Math.round(this.GetValue()));
+					$("#idCurrentPercent").text(Math.round(this.GetPercent() * 100));
+				}
+			});
+			$("#txtMin").change(function() {
+				alert($("#txtMin").val());
+				sld3.MinValue = parseInt($("#txtMin").val(), 10);
+			});
+			$("#txtMin").change(function() {
+				alert($("#txtMin").val());
+				sld3.MaxValue = parseInt($("#txtMax").val(), 10);
+			});
+
+			sld3.onMove();
+			$("#btnMoveV").click(function() {
+				alert($("#txtMove").val());
+				sld3.SetValue(parseInt($("#txtMove").val(), 10));
+			});
+			$("#btnMoveP").click(function() {
+				sld3.SetPercent(parseInt($("#txtMove").val(), 10) / 100);
+			});
+			$("#btnEase").click(function() {
+				if(sld3.Ease) {
+					sld3.Ease = false;
+					this.value = "设置缓动";
+				} else {
+					sld3.Ease = true;
+					this.value = "取消缓动";
+				}
+			});
+		</script>
+	</body>
+
+</html>

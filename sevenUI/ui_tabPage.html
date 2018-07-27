@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/seven-style.css" />
+		<link rel="stylesheet" href="css/admin-style.css" />
+		<link rel="stylesheet" href="css/font_v1/iconfont.css" />
+		<link rel="stylesheet" href="css/font_v2/font-awesome.min.css" />
+		<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/sevenUI.js"></script>
+		<!--左边栏滚动-->
+		<script type="text/javascript" src="lib/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="lib/less-1.7.0.js"></script>
+		<script type="text/javascript" src="js/plugins/init.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="sv_navbar_top">
+			<div class="navbar_brand">
+				<img class="sv_logo" src="img/icon_logo.png" /> SevenUI
+			</div>
+		</div>
+		<div class="sv_sidebar sidebar_color">
+			<div data-scrollbar=true data-height="100%">
+				<div class="sidebar_header">
+					<div class="info">
+						<img src="img/iconfont-shuaxin.png" />
+						<div class="name">Seven Liu</div>
+						<div class="text">Front end developer</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav_li active">
+						<a><i class="fa fa-2x fa-align-left"></i>commen<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li class="active">
+								<a href="cataloguePage.html">目录</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-tags"></i>UI Elements<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>commen UI</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-th"></i>Form<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainContent">
+			<div class="row">
+				<div class="col-6">
+					<div class="sv_panel">
+						<div class="panel_head">你的标题
+							<div class="btn_box">
+								<div data-click="panel-min" class="btn_circle"><i class="fa fa-minus-circle"></i></div>
+								<div data-click="panel-close" class="btn_circle"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</div>
+						<div class="panel_body">
+							<ul class="sv_accordion">
+								<li class="accordion_box">
+									<h3 class="accordion_t"><i class="fa fa-minus-square"></i>first</h3>
+									<p class="accordion_body active">asdjoijasoidjd</p>
+								</li>
+								<li class="accordion_box">
+									<h3 class="accordion_t"><i class="fa fa-plus-square"></i>second</h3>
+									<p class="accordion_body">asdjoijasoidjd<br>adsd<br>asdsd</p>
+								</li>
+								<li class="accordion_box">
+									<h3 class="accordion_t"><i class="fa fa-plus-square"></i>third</h3>
+									<p class="accordion_body">asdjoijasoidjd</p>
+								</li>
+								<li class="accordion_box">
+									<h3 class="accordion_t"><i class="fa fa-plus-square"></i>four</h3>
+									<p class="accordion_body">asdjoijasoidjd</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			//左边栏点击事件
+			handleSidebarMenu();
+			handleSlimScroll();
+			//看板事件
+			handlePanel();
+			
+			$(document).ready(function(){
+				$(".sv_accordion .accordion_t").click(function(){
+					$(this).next(".accordion_body").slideToggle("fast").parent().siblings().find(".accordion_body:visible").slideUp("fast");
+					$(this).find("i").toggleClass("fa fa-plus-square").toggleClass("fa fa-minus-square");
+					$(this).parent().siblings().find("i").attr("class","fa fa-plus-square");
+				});
+			})
+		</script>
+	</body>
+
+</html>

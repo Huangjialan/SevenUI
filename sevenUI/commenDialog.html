@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/seven-style.css" />
+		<link rel="stylesheet" href="css/admin-style.css" />
+		<link rel="stylesheet" href="css/font_v1/iconfont.css" />
+		<link rel="stylesheet" href="css/font_v2/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/gritter/css/jquery.gritter.css" />
+		<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+		<!--左边栏滚动-->
+		<script type="text/javascript" src="lib/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="lib/less-1.7.0.js"></script>
+		<script type="text/javascript" src="js/sevenUI.js"></script>
+		<script type="text/javascript" src="js/plugins/init.js"></script>
+		<script type="text/javascript" src="lib/jquery.gritter.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.reveal.js" ></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="sv_navbar_top">
+			<div class="navbar_brand">
+				<img class="sv_logo" src="img/icon_logo.png" /> SevenUI
+			</div>
+		</div>
+		<div class="sv_sidebar sidebar_color">
+			<div data-scrollbar=true data-height="100%">
+				<div class="sidebar_header">
+					<div class="info">
+						<img src="img/iconfont-shuaxin.png" />
+						<div class="name">Seven Liu</div>
+						<div class="text">Front end developer</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav_li active">
+						<a><i class="fa fa-2x fa-align-left"></i>commen<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li class="active">
+								<a>Dialog Modal</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-tags"></i>UI Elements<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>commen UI</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="fa fa-2x fa-th"></i>Form<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+						<ul class="sub_menu">
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+							<li>
+								<a>asdsad</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+					<li class="nav_li">
+						<a><i class="iconfont icon-facebook"></i>Tables<i class="iconfont icon-xialajiantou1"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainContent">
+			<div class="row">
+				<div class="col-6">
+					<div class="sv_panel">
+						<div class="panel_head">你的标题
+							<div class="btn_box">
+								<div data-click="panel-min" class="btn_circle"><i class="fa fa-minus-circle"></i></div>
+								<div data-click="panel-close" class="btn_circle"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</div>
+						<div class="panel_body">
+							<div class="col-12">
+								<table class="sv_table col-12">
+									<tr>
+										<td>最基本只有标题，提示的对话框</td>
+										<td>
+											<a class="btn_sv green_bg" onclick="clickme();">click me</a>
+										</td>
+									</tr>
+									<tr>
+										<td>最基本只有标题，提示的对话框</td>
+										<td>
+											<a class="btn_sv blue_bg" data-reveal-id="modal-dialog">click me</a>
+										</td>
+									</tr>
+								</table>
+								<!--<label>最基本只有标题，提示的对话框</label>
+								<div class="btn_sv green_bg fl_r">click</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-dialog -->
+		<!--<div class="modal_sv fade" id="modal-dialog">
+			<div class="modal-dialog">
+				Modal body content here...
+			</div>
+		</div>-->
+		<div id="mainDiv"></div>
+		<div id="modal-dialog" class="reveal-modal">
+			<a class="close-reveal-modal">×</a>
+			<h1>语言：</h1>
+			<select id="language1" class="form-control">
+
+				<option value="en">English</option>
+
+				<option value="zh-cn">中文</option>
+
+			</select>
+			<div class="btn-box">
+				<button id="downloadTDS" type="button" class="btn btn-red">下载</button>
+			</div>
+		</div>
+		<script>
+			//左边栏点击事件
+			handleSidebarMenu();
+			handleSlimScroll();
+			//看板事件
+			handlePanel();
+			$.gritter.add({
+				title: '提醒',
+				text: '提现设置已经成功！',
+				sticky: false,
+				time: 1000,
+				speed: 500,
+				position: 'bottom-right',
+				class_name: 'gritter-success' //gritter-center 
+			});
+
+			function clickme() {
+				alertBox_pc("提示", "内容", "你好");
+				//				swAddBox(500, 200, 300, 400, "simi", "mainDiv", 1); //宽度，高度，左坐标，上坐标，ID，父容器ID，是否可拖拽
+			}
+		</script>
+	</body>
+
+</html>
